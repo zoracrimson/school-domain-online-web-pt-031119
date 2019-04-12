@@ -1,20 +1,23 @@
-class School 
-  
-  def initialize(school)
-    @school = school
+class School
+
+  def initialize(school_name)
+    @school_name = school_name
     @roster = {}
-  end 
-  
-  def add_student(grade, name) 
-    @name = name
-    @grade = grade 
-    if !(@roster.include?(grade))
+  end
+
+  def roster
+    @roster
+  end
+
+  def add_student(name, grade)
+    @student_name = name
+    @grade = grade
+    if @roster.include?(grade) == false
       @roster[grade] = []
-    end 
-    @roster[grade] << name 
-  end 
-  
-  
+    end
+    @roster[grade] << name
+  end
+
   def grade(number)
     @roster[number]
   end
@@ -24,7 +27,4 @@ class School
       @roster[grade] = name.sort
     end
   end
-
-  
-  
-end 
+end
