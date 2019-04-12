@@ -6,6 +6,9 @@ class School
   end 
   
   def add_student(grade, name) 
+    @name = name
+    @grade = grade 
+    
     
     
   end 
